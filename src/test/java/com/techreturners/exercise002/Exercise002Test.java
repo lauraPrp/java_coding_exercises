@@ -1,9 +1,9 @@
 package com.techreturners.exercise002;
 
-import static org.junit.Assert.assertEquals;
-
+import com.techreturners.exercise002.Exercise002.Person;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
 public class Exercise002Test {
 
     @Test

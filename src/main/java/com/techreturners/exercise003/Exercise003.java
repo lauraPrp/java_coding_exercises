@@ -1,5 +1,5 @@
 package com.techreturners.exercise003;
-
+import java.util.*;
 public class Exercise003 {
    Map<String,Integer> flavours =  new HashMap<String,Integer>() ;
 
@@ -10,7 +10,6 @@ public class Exercise003 {
         flavours.put("Mint Chocolate Chip",3);
         flavours.put("Chocolate",4);
         flavours.put("Mango Sorbet",5);
-
     }
 
     int getIceCreamCode(String iceCreamFlavour) {

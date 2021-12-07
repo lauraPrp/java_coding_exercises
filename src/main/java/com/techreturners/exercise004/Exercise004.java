@@ -1,19 +1,23 @@
 package com.techreturners.exercise004;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.time.*;
+import java.time.temporal.ChronoUnit;
 
 public class Exercise004 {
 
+    LocalDateTime ldLater;
+    public static  long gigasec= 1_000_000_000L;
+
     public Exercise004(LocalDate date) {
-        throw new UnsupportedOperationException("You can delete this statement and add your code here.");
+        LocalTime lt = LocalTime.of(0,0,0);
+        ldLater = LocalDateTime.of(date,lt).plus(gigasec, ChronoUnit.SECONDS);
     }
 
     public Exercise004(LocalDateTime dateTime) {
-        throw new UnsupportedOperationException("You can delete this statement and add your code here.");
+         ldLater = dateTime.plus(gigasec, ChronoUnit.SECONDS) ;
     }
 
     public LocalDateTime getDateTime() {
-        throw new UnsupportedOperationException("You can delete this statement and add your code here.");
+    return   ldLater;
     }
 }
