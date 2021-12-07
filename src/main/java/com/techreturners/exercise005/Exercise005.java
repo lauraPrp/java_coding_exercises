@@ -1,9 +1,22 @@
 package com.techreturners.exercise005;
 
+import java.util.Locale;
+
 public class Exercise005 {
+    private static 	String loAlphabet="abcdefghijklmnopqrstuvwxyz";
+
 
     public boolean isPangram(String input) {
-        throw new UnsupportedOperationException("You can delete this statement and add your code here.");
+       boolean noitsnot=true;
+       input = input.toLowerCase(Locale.ROOT);
+       int[] check = new int[26];
+       for(int i =0;i<26;i++){
+          char letter = loAlphabet.charAt(i);
+          if(input.indexOf(letter)==-1){
+              noitsnot =false;
+          }
+       }
+              return noitsnot;
     }
 
 }
