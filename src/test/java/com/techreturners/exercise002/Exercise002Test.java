@@ -4,8 +4,6 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import com.techreturners.exercise002.Exercise002.Person;
-
 public class Exercise002Test {
 
     @Test

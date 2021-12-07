@@ -8,13 +8,13 @@ import java.text.DecimalFormat;
 
 public class Exercise001 {
     public String capitalizeWord(String word) {
-    	
+
         return word.substring(0,1).toUpperCase().concat(word.substring(1));
-    
+
     }
 
     public String generateInitials(String firstName, String lastName) {
-      String initials= firstName.substring(0,1).toUpperCase().concat(".").concat(lastName.substring(0,1).toUpperCase()); 
+      String initials= firstName.substring(0,1).toUpperCase().concat(".").concat(lastName.substring(0,1).toUpperCase());
        return initials;
     }
 
@@ -23,7 +23,7 @@ public class Exercise001 {
     	BigDecimal bd = new BigDecimal(valDouble1);
     	BigDecimal bd2 = bd.setScale(2, RoundingMode.HALF_UP);
     	double res = bd2.doubleValue();
-    	
+
 	return res;
     }
 

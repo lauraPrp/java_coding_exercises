@@ -4,7 +4,7 @@ public class Exercise002 {
 
     public boolean isFromManchester(Person p) {
     	if(p.getCity().equals(Person.MCR)) return true;
-    	
+
     	return false;
     }
 
@@ -17,8 +17,8 @@ public class Exercise002 {
 
 
 
-	
-	
+
+
 	//"Peter", "Smith", "Manchester", 23
 
 //	public boolean isFromManchester(Person p){
@@ -26,7 +26,7 @@ public class Exercise002 {
 //		return true;
 //	}
 //return false;
-//}	
+//}
 static class Person{
 	public static final String MCR="Manchester";
 	public String name;
@@ -40,9 +40,9 @@ static class Person{
 		this.forename=forename;
 		this.city=city;
 		this.age=age;
-		
+
 	}
-	
+
 	public String getName() {
 		return name;
 	}
