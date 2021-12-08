@@ -8,7 +8,6 @@ import java.time.Month;
 import java.time.format.DateTimeParseException;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
 
 public class Exercise004Test {
 
@@ -50,18 +49,15 @@ public class Exercise004Test {
     }
 
     @Test(expected = DateTimeParseException.class)
-    public void checkGetDateTimeWhithStringWrongDay() { //String Format YYYYMMDD
+    public void checkGetDateTimeWithStringWrongDay() { //String Format YYYYMMDD
 
         Exercise004 ex004 = new Exercise004("20210755");
-        LocalDateTime expected = LocalDateTime.of(2053, Month.MARCH, 27, 1, 46, 40);
-
-        assertNotEquals(expected,ex004.getDateTime());
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void checkGetDateTimeWhithStringWrong2() { //String Format YYYYMMDD
-
         Exercise004 ex004 = new Exercise004("2021055755");
+
 }
 
 
