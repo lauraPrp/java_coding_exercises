@@ -70,8 +70,14 @@ public class Exercise005Test {
     @Test
     public void checkSentenceWithEverythingIsAPangram() {
         assertTrue(ex005.isPangram("I'd like to have a qwertyuiopASDFGHJKLzxcvbnm,.-òèà@<<!£$$%&/()=?^ for dinner"));
+
+    }
+
+    @Test
+    public void checkSentenceWithEverythingIsNotAPangram() {
         assertFalse(ex005.isPangram("plmk,.koijm'kòlpi 12569818/*5165*ghjgyfczzr45><'"));
         assertFalse(ex005.isPangram("qertyuiopasdfghjklzxcvbnm"));
     }
+
 
 }
