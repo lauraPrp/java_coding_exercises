@@ -7,15 +7,15 @@ public class Exercise005 {
 
 
     public boolean isPangram(String input) {
-       boolean noitsnot=true;
+       boolean isPangramForSure=true;
        input = input.toLowerCase(Locale.ROOT);
-        for(int i =0;i<26;i++){
+        for(int i =0;i<loAlphabet.length();i++){
           char letter = loAlphabet.charAt(i);
           if(input.indexOf(letter)==-1){
                return false;
           }
        }
-        return noitsnot;
+        return isPangramForSure;
     }
 
 }
