@@ -44,6 +44,12 @@ public class Exercise003Test {
 
         assertEquals(expected, ex003.getIceCreamCode(iceCreamFlavour));
         assertEquals(expected, ex003b.getIceCreamCode(iceCreamFlavour, true));
+
+        String iceCreamFlavour2 = "Mango Sorbet";
+        int expected2 = 5;
+
+        assertEquals(expected, ex003.getIceCreamCode(iceCreamFlavour));
+        assertEquals(expected, ex003b.getIceCreamCode(iceCreamFlavour, true));
     }
 
     
