@@ -1,9 +1,18 @@
 package com.techreturners.exercise003;
-import java.util.*;
+
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Map;
+
 public class Exercise003 {
-   Map<String,Integer> flavours =  new HashMap<String,Integer>() ;
+    Map<String,Integer> flavours =  new HashMap<>() ;
+    String[] flavs= {"Pistachio","Raspberry Ripple","Vanilla","Mint Chocolate Chip","Chocolate","Mango Sorbet"};
 
     public Exercise003(){
+
+    }
+
+    public Exercise003(boolean myWay){
         flavours.put("Pistachio",0);
         flavours.put("Raspberry Ripple",1);
         flavours.put("Vanilla",2);
@@ -13,26 +22,33 @@ public class Exercise003 {
     }
 
     int getIceCreamCode(String iceCreamFlavour) {
-        return  flavours.get(iceCreamFlavour);
+        for(int i=0;i<flavs.length;i++){
+            if(flavs[i].equals(iceCreamFlavour)){
+                return i;
+            }
+        }
+    return 999;
     }
 
     String[] iceCreamFlavours() {
-    	String[] result=new String[6];
-    	LinkedList<String> sortedList = new LinkedList<>();
+    	return flavs;
 
-    	flavours.entrySet()
-    	.stream()
-    	.sorted(Map.Entry.comparingByValue())
-    	.forEachOrdered(x -> sortedList.add(x.getKey()));
-
-         result= (String[]) sortedList.toArray(new String[sortedList.size()]);
-         return result;
     }
 
-    String[] pickMultipleIceCreamFlavours(){
-        Set<String> keysfl = flavours.keySet();
-    	String[] result = (String[]) keysfl.stream().toArray(String[] ::new);
-        return result;
+    int getIceCreamCode(String iceCreamFlavour, boolean myWay) {
+        return  flavours.get(iceCreamFlavour);
     }
+    String[] iceCreamFlavours(boolean myWay) {
+        String[] result=new String[6];
+        LinkedList<String> sortedList = new LinkedList<>();
+
+        flavours.entrySet()
+                .stream()
+                .sorted(Map.Entry.comparingByValue())
+                   .forEachOrdered(x -> sortedList.add(x.getKey()));
+
+        return sortedList.toArray(new String[sortedList.size()]);
+    }
+
 
 }
