@@ -2,18 +2,20 @@ package com.techreturners.exercise003;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.Ignore;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
 public class Exercise003Test {
 
     private Exercise003 ex003;
+    private Exercise003 ex003b;
 
     @Before
     public void setup() {
         ex003 = new Exercise003();
+        ex003b = new Exercise003(true);
     }
+
     
     @Test
     public void checkGetIceCreamCodeForMintChocolateChip() {
@@ -21,6 +23,7 @@ public class Exercise003Test {
         int expected = 3;
 
         assertEquals(expected, ex003.getIceCreamCode(iceCreamFlavour));
+        assertEquals(expected, ex003b.getIceCreamCode(iceCreamFlavour,true));
     }
 
     
@@ -30,6 +33,7 @@ public class Exercise003Test {
         int expected = 5;
 
         assertEquals(expected, ex003.getIceCreamCode(iceCreamFlavour));
+        assertEquals(expected, ex003b.getIceCreamCode(iceCreamFlavour,true));
     }
 
     
@@ -39,6 +43,7 @@ public class Exercise003Test {
         int expected = 1;
 
         assertEquals(expected, ex003.getIceCreamCode(iceCreamFlavour));
+        assertEquals(expected, ex003b.getIceCreamCode(iceCreamFlavour, true));
     }
 
     
@@ -48,6 +53,7 @@ public class Exercise003Test {
         String[] expected = { "Pistachio", "Raspberry Ripple", "Vanilla", "Mint Chocolate Chip", "Chocolate", "Mango Sorbet" };
 //	assertEquals on Arrays is deprecated
         assertArrayEquals(expected, ex003.iceCreamFlavours());
+        assertArrayEquals(expected, ex003b.iceCreamFlavours(true));
     }
 
 
